@@ -1,0 +1,21 @@
+# Godot 4.x cache and metadata
+.godot/
+.import/
+*.import
+
+# Export settings (safe to ignore if syncing manually)
+export_presets.cfg
+project_export.cfg
+
+# User/editor data
+*.tmp
+*.log
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor settings (if using VS Code or similar)
+.vscode/
+.idea/
