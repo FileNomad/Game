@@ -322,14 +322,9 @@ size = Vector2(43, 58)
 script = ExtResource("1_q6r6c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(78, 616)
 scale = Vector2(1.625, 1.83333)
 sprite_frames = SubResource("SpriteFrames_ornx7")
 animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(73.5, 616)
 shape = SubResource("RectangleShape2D_kdubu")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(578, 321)

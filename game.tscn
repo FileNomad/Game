@@ -1,47 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdf7cv0yya2ai"]
+[gd_scene load_steps=4 format=3 uid="uid://cdf7cv0yya2ai"]
 
 [ext_resource type="PackedScene" uid="uid://bet2yy2vwkpdl" path="res://player.tscn" id="1_80nbo"]
-[ext_resource type="Texture2D" uid="uid://cnrar1enuugun" path="res://background/Background layers/Layer_0008_3.png" id="1_e2o6t"]
-[ext_resource type="Texture2D" uid="uid://rm16or5byp28" path="res://background/Background layers/Layer_0007_Lights.png" id="2_fc0e3"]
-[ext_resource type="Texture2D" uid="uid://ogeebte828dr" path="res://background/Background layers/Layer_0005_5.png" id="3_7jktm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwb40"]
-size = Vector2(1166, 7)
+[sub_resource type="GDScript" id="GDScript_80nbo"]
+script/source = "extends Node2D
+
+
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
-size = Vector2(4, 672)
+size = Vector2(1930.25, 10)
 
 [node name="Game" type="Node2D"]
+script = SubResource("GDScript_80nbo")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(580, 648)
-shape = SubResource("RectangleShape2D_mwb40")
-
-[node name="left_wall" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-2, 326)
+position = Vector2(960.875, 1080)
 shape = SubResource("RectangleShape2D_80nbo")
 
-[node name="Layer00083" type="Sprite2D" parent="."]
-position = Vector2(881.5, -137)
-scale = Vector2(1.97953, 2.35561)
-texture = ExtResource("1_e2o6t")
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-
-[node name="Parallax2D" type="Parallax2D" parent="ParallaxBackground/ParallaxLayer"]
-
-[node name="Layer00064" type="Sprite2D" parent="."]
-position = Vector2(478, -75)
-scale = Vector2(2.0194, 1.30958)
-texture = ExtResource("2_fc0e3")
-
-[node name="Layer00055" type="Sprite2D" parent="."]
-position = Vector2(669, -150.5)
-scale = Vector2(1.45043, 2.37705)
-texture = ExtResource("3_7jktm")
-
 [node name="character" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(139, 1050)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(960, 540)
