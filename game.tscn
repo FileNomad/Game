@@ -1,27 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdf7cv0yya2ai"]
+[gd_scene load_steps=5 format=3 uid="uid://cdf7cv0yya2ai"]
 
 [ext_resource type="PackedScene" uid="uid://bet2yy2vwkpdl" path="res://player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://ddnh776nl6lt4" path="res://parallax_bg.tscn" id="2_e2o6t"]
 
 [sub_resource type="GDScript" id="GDScript_80nbo"]
 script/source = "extends Node2D
-
-
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
-size = Vector2(1930.25, 10)
+size = Vector2(6140.25, 5)
 
 [node name="Game" type="Node2D"]
 script = SubResource("GDScript_80nbo")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(960.875, 1080)
+[node name="floor" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3065.88, 1082.5)
 shape = SubResource("RectangleShape2D_80nbo")
 
-[node name="character" parent="." instance=ExtResource("1_80nbo")]
-position = Vector2(139, 1050)
+[node name="parallax_bg" parent="." instance=ExtResource("2_e2o6t")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="character" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(92, 1041)
+
+[node name="Camera2D" type="Camera2D" parent="character"]
+position = Vector2(-92, -1041)
 offset = Vector2(960, 540)

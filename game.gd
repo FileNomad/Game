@@ -25,7 +25,3 @@ func _process(delta):
 	var edges = get_character_edges()
 	var left_edge = edges[0]
 	var right_edge = edges[1]
-	print(left_edge)
-	print(screen_right)
-	if left_edge >= screen_right:
-		character.global_position.x = screen_left - (character_shape.size.x * 0.5)

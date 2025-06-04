@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Practice"
+run/main_scene="uid://cdf7cv0yya2ai"
 config/features=PackedStringArray("4.4", "Mobile")
 
 [display]

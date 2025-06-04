@@ -10,7 +10,6 @@ var is_idle = true
 @onready var screen_size = get_viewport_rect().size
 
 func _physics_process(delta: float) -> void:
-	screen_wrap()
 	var direction = Vector2.ZERO
 	if Input.is_action_pressed("move_left"):
 		direction.x -= 1
@@ -56,6 +55,3 @@ func _physics_process(delta: float) -> void:
 			anim.play("jump")
 			is_idle = false
 			
-func screen_wrap():
-	if position.x > screen_size.x:
-		position.x = 0
